@@ -11,7 +11,7 @@
     content="width=device-width, initial-scale=1, maximum-scale=5"
 />
 <meta name="generator" content="Hexo 7.3.0">
-<link rel="stylesheet" href="/css/style.css?v=1732377251992">
+<link rel="stylesheet" href="/css/style.css?v=1732378094039">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <link
     rel="stylesheet"
@@ -22,7 +22,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/solarized-light.css"
 />
-<script src="/js/core.js?v=1732377251992"></script>
+<script src="/js/core.js?v=1732378094039"></script>
 
 
 
@@ -597,19 +597,15 @@
 		</div>
 	</div>
 	<div class="container comment">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
-<div id="gitalk"></div>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '80b2453b6d5f37ad6225',
-        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
-        id: window.location.pathname,
-        repo: 'nexmoe.github.io',
-        owner: 'nexmoe',
-        admin: 'nexmoe'
+		<div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '27qBY80UuaT75mwn7shbXadj-gzGzoHsz',
+        appKey: 'gYuZwaWOM81vS09jYufI8EtA'
     })
-    gitalk.render('gitalk')
 </script>
 	</div>
 </div>
