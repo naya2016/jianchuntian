@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		
+<title>第27章 见清欢 - 梦浅如烟</title>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=5"
+/>
+<meta name="generator" content="Hexo 7.3.0">
+<link rel="stylesheet" href="/css/style.css?v=1732722577112">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap"
+    media="all"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/solarized-light.css"
+/>
+<script src="/js/core.js?v=1732722577112"></script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js" async></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("load", function() {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.classList.add('fade-out');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1000);
+      }
+    });
+  });
+</script>
+
+	<!-- hexo injector head_end start -->
+    <style>
+      /* 修改加载容器的样式 */
+      #loading-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* 添加模糊背景层 */
+      .blur-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      /* 调整加载动画容器，确保在模糊层之上 */
+      .modern-book-loader {
+        width: 160px;
+        height: 220px;
+        position: relative;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        z-index: 1;
+      }
+
+      /* 其余样式保持不变 */
+      .book-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: floating 3s ease-in-out infinite;
+      }
+      
+      .book {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transform: rotateY(-30deg);
+      }
+      
+      .book-front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #ff3366 0%, #ff6b6b 100%);
+        border-radius: 2px 12px 12px 2px;
+        box-shadow: 
+          0 0 20px rgba(255, 51, 102, 0.2),
+          inset 0 0 40px rgba(0, 0, 0, 0.2);
+        transform: translateZ(12px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      
+      .book-front::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+        pointer-events: none;
+      }
+      
+      .book-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #ff3366;
+        border-radius: 12px 2px 2px 12px;
+        transform: translateZ(-12px) rotateY(180deg);
+      }
+      
+      .book-side {
+        position: absolute;
+        width: 24px;
+        height: 100%;
+        background: linear-gradient(to right, #ff3366 0%, #ff6b6b 100%);
+        transform: rotateY(90deg) translateZ(80px);
+        border-radius: 2px;
+      }
+      
+      .page {
+        position: absolute;
+        width: 95%;
+        height: 96%;
+        background: #fff;
+        border-radius: 2px 8px 8px 2px;
+        transform-origin: left;
+        animation: flip-page 2s ease-in-out infinite;
+      }
+      
+      .page-content {
+        padding: 20px;
+        opacity: 0.7;
+      }
+      
+      .text-line {
+        height: 6px;
+        background: linear-gradient(90deg, #e0e0e0 0%, #f5f5f5 50%, #e0e0e0 100%);
+        margin-bottom: 10px;
+        border-radius: 3px;
+        animation: text-shimmer 2s linear infinite;
+      }
+      
+      .shimmer {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          transparent 100%
+        );
+        animation: shimmer 2s infinite;
+      }
+      
+      @keyframes floating {
+        0%, 100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(3deg);
+        }
+      }
+      
+      @keyframes flip-page {
+        0%, 100% {
+          transform: rotateY(0deg);
+        }
+        50% {
+          transform: rotateY(-160deg);
+        }
+      }
+      
+      @keyframes shimmer {
+        from {
+          transform: translateX(-150%);
+        }
+        to {
+          transform: translateX(150%);
+        }
+      }
+      
+      @keyframes text-shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+      
+      .particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        animation: particle-float 3s infinite;
+      }
+      
+      @keyframes particle-float {
+        0%, 100% {
+          transform: translateY(0) translateX(0);
+          opacity: 0;
+        }
+        50% {
+          transform: translateY(-100px) translateX(30px);
+          opacity: 1;
+        }
+      }
+
+      @supports not (backdrop-filter: blur(10px)) {
+        .blur-background {
+          background: rgba(255, 255, 255, 0.8);
+        }
+      }
+    </style>
+  <!-- hexo injector head_end end --></head>
+
+	<body><!-- hexo injector body_begin start -->
+    <div id="loading-container">
+      <div class="blur-background"></div>
+      <div class="modern-book-loader">
+        <div class="book-container">
+          <div class="book">
+            <div class="book-front">
+              <div class="shimmer"></div>
+              <div class="page">
+                <div class="page-content">
+                  <div class="text-line" style="width: 80%"></div>
+                  <div class="text-line" style="width: 60%"></div>
+                  <div class="text-line" style="width: 90%"></div>
+                  <div class="text-line" style="width: 70%"></div>
+                  <div class="text-line" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="book-back"></div>
+            <div class="book-side"></div>
+          </div>
+        </div>
+        <div class="particles">
+          
+            <div class="particle" style="
+              left: 3.7578483149698805%;
+              top: 70.22386082241148%;
+              animation-delay: 0.08703319865499104s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 72.87998210903464%;
+              top: 93.6148687306621%;
+              animation-delay: 0.2340791903105317s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 2.691399524805793%;
+              top: 49.927084370142595%;
+              animation-delay: 0.8819506259755725s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 73.09552078005636%;
+              top: 16.433905154981264%;
+              animation-delay: 0.32826894059328016s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 69.73578569316304%;
+              top: 54.88784406365732%;
+              animation-delay: 1.2256151762764653s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 13.856699462224565%;
+              top: 17.425794295128405%;
+              animation-delay: 1.4752530336267546s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 68.88350397894814%;
+              top: 78.47597321459486%;
+              animation-delay: 1.4418887498270312s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 73.45721481344721%;
+              top: 58.8427969312884%;
+              animation-delay: 0.08735874435426938s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 40.744566440787565%;
+              top: 38.858175282598495%;
+              animation-delay: 1.4013919162845396s;
+            "></div>
+          
+            <div class="particle" style="
+              left: 13.049864091388974%;
+              top: 97.30012915647512%;
+              animation-delay: 1.5862446012496756s;
+            "></div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      window.addEventListener('load', function() {
+        const loadingContainer = document.getElementById('loading-container');
+        loadingContainer.style.opacity = '0';
+        setTimeout(function() {
+          loadingContainer.style.display = 'none';
+        }, 500);
+      });
+      
+      function createParticles() {
+        const particles = document.querySelector('.particles');
+        setInterval(() => {
+          const particle = document.createElement('div');
+          particle.className = 'particle';
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.top = Math.random() * 100 + '%';
+          particle.style.animationDelay = Math.random() * 2 + 's';
+          particles.appendChild(particle);
+          
+          setTimeout(() => {
+            particle.remove();
+          }, 3000);
+        }, 300);
+      }
+      
+      createParticles();
+    </script>
+  <!-- hexo injector body_begin end -->
+        <div class="header  ">
+    <div class="container">
+        <a class="logo" href="/" title="梦浅如烟">梦浅如烟</a>
+        <ul class="nav">
+            
+                <li class="nav-item"><a href="/archives">Archives</a></li>
+            
+                <li class="nav-item"><a href="/about.html">About</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="content">
+	<div class="banner">
+		<div class="container">
+			<h1>第27章 见清欢</h1>
+			<div class="info"><span class="date">2024年11月27日</span>•梦浅如烟 
+			
+					《<a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%A7%81%E6%98%A5%E5%A4%A9%E5%85%A8%E8%A7%92%E8%89%B2he%E5%90%8C%E4%BA%BA%E7%BB%93%E5%B1%80/">见春天全角色he同人结局</a>》
+				
+				
+			</div>
+			
+		</div>
+	</div>
+	<div class="container">
+		<article class="post">
+			<p>　　清晨的闹钟在空气中急促地响起，轻轻拨动窗外灰白晨曦，将寂静从房间里撕开一道口子。</p>
+<p>　　江渡闭着眼，眉心不自觉地皱了皱，她向被窝深处蜷缩了一下，试图用余温抵御闹钟的不速之客。</p>
+<p>　　旁边的魏清越似乎也被这声音吵醒，他抬起手探向床头柜，拿起手机，熟练地按下闹钟，卧室重新归于安静。</p>
+<p>　　魏清越没有急着起身，而是懒散地将手垫在脑后，目光从天花板慢慢移向身旁的江渡。</p>
+<p>　　清晨微凉的空气中，江渡整个人缩在被子里，只露出一截纤细的脖颈和一撮柔软的发丝。</p>
+<p>　　她的头发如丝绸般柔顺，散落在枕头上，同时也覆在魏清越的脖颈间。</p>
+<p>　　江渡的呼吸轻而均匀，显然还没完全清醒过来。</p>
+<p>　　窗帘没有完全拉上，几缕清晨的阳光透过缝隙洒在房间里，落在床铺上。</p>
+<p>　　过了好一会儿，江渡才微微睁开眼睛，目光先落在被子的边缘，又怯生生地向魏清越的方向扫了一眼。</p>
+<p>　　昨夜的亲密画面在脑海里闪过，她的脸立刻染上了一抹浅浅的红色，随后便赶紧将头埋进被子里，似乎这样便能躲开那双总是能看穿她的小鹿眼。</p>
+<p>　　魏清越见状，嘴角轻轻扬起，露出一抹淡淡的笑意。他抬起手，缓缓在江渡的头发上拍了拍，</p>
+<p>　　“还不想起来？”</p>
+<p>　　江渡的声音闷闷地从被子里传出来，</p>
+<p>　　“你……你别看我。”</p>
+<p>　　“怎么，害羞了？”</p>
+<p>　　魏清越挑了挑眉，语气里藏着点揶揄。</p>
+<p>　　江渡没有回答，只是更加用力地把脸埋了进去，连耳尖都染上了红色。</p>
+<p>　　清晨的空气带着些许凉意，让人忍不住恋恋不舍这方小小的温暖世界。</p>
+<p>　　但终究还是要开始新的一天。江渡悄悄吸了一口气，猛地掀开被子，动作略显僵硬地坐了起来。</p>
+<p>　　她不敢去看魏清越的脸，只是低头整理自己的睡衣，然后匆匆抓起床边的衣服，快步走向洗漱间。</p>
+<p>　　魏清越看着她的背影，嘴角的笑意更深了些。他慢悠悠地坐起身，肩膀一动，似乎还带着些许昨夜余下的疲惫。</p>
+<p>　　手腕轻轻揉了揉眼角，他懒散地靠回枕头上，闭着眼回味片刻，才不紧不慢地起身。</p>
+<p>　　江渡洗漱完毕，换了一身清新柔和的毛衣和格子裙，站在洗漱间门口，看着魏清越还没起身，忍不住轻声提醒了一句：</p>
+<p>　　“快点起来，不然要迟到了。”</p>
+<p>　　魏清越伸了个懒腰，低低“嗯”了一声，才慢吞吞地起身，走向洗漱间。</p>
+<p>　　他从江渡身边经过时，故意偏头在她耳边低声说道：</p>
+<p>　　“早上脸这么红，是不是还在想昨晚的事？”</p>
+<p>　　江渡愣了一下，随即用手轻轻推了他一把，声音细若蚊蚋，</p>
+<p>　　“你别胡说！”</p>
+<p>　　魏清越轻笑了一声，也不再逗她，径直走进洗漱间。</p>
+<p>　　两人整理好衣衫准备出门时，魏清越从玄关柜里拿出了昨天买的那两条红白相间的情侣围巾。</p>
+<p>　　他走到江渡面前，低下头，将围巾绕到她颈间，仔细地帮她整理好。</p>
+<p>　　江渡的目光低垂着，脸颊因为这亲昵的动作再次泛红。</p>
+<p>　　魏清越却像是没有察觉，只是伸手捏了捏她的脸，柔声说道：</p>
+<p>　　“出门记得多穿点，你最近身子才康复，别又着凉了。”</p>
+<p>　　江渡轻轻点了点头，低声应道：</p>
+<p>　　“知道了。”</p>
+<p>　　魏清越给自己围好围巾后，牵起江渡的手，将她的小手塞进了自己的大衣口袋里。</p>
+<p>　　他的手掌干燥而温暖，裹住她冰凉的指尖。</p>
+<p>　　江渡下意识地缩了一下，想要抽回手，却被魏清越握得更紧了些。</p>
+<p>　　他低头看着她，语气宠溺又笃定：</p>
+<p>　　“别躲，手太冷了。”</p>
+<p>　　江渡抿了抿唇，终究没有再说什么，任由他牵着自己走出了小区。</p>
+<p>　　街边，一辆黑色的车正安静地等候着，老罗坐在驾驶座里，见到他们走来，赶忙下车打了个招呼：</p>
+<p>　　“魏总，江小姐，早啊！”</p>
+<p>　　“早，”</p>
+<p>　　魏清越微微颔首，</p>
+<p>　　“稍等一会儿，我们先买点早餐。”</p>
+<p>　　老罗点了点头，目送他们走向不远处的小包子铺。</p>
+<p>　　店内热气腾腾，浓郁的香气扑面而来。江渡站在一旁，看着魏清越熟练地点了两个小笼包和两碗白粥，又加了一笼蟹黄汤包和一份小咸菜。</p>
+<p>　　魏清越端着托盘走到座位上，将餐点一一摆好，然后拿起一个包子，轻轻吹了吹热气，递到江渡嘴边：</p>
+<p>　　“来，趁热吃。”</p>
+<p>　　江渡微微一愣，脸颊又是一红，她小声说道：</p>
+<p>　　“我自己来就行……”</p>
+<p>　　魏清越却没有收回手，目光温柔又坚定：</p>
+<p>　　“张嘴。”</p>
+<p>　　江渡无奈，只好轻轻咬了一口，馅料的香味瞬间在口腔里蔓延开来。</p>
+<p>　　她垂下眼，低声说道：</p>
+<p>　　“好烫……”</p>
+<p>　　魏清越轻轻一笑，语气宠溺又带着点无奈：</p>
+<p>　　“都说了小心点。”</p>
+<p>　　江渡没再说什么，只是埋头吃起自己的那份早餐，而魏清越则慢悠悠地喝着粥，不时抬眼看她一眼，目光柔和得像是三月春水。</p>
+<p>　　吃完早餐，他们重新回到车上，老罗熟练地发动引擎，车子缓缓驶向江渡的公司。</p>
+<p>　　在车里，魏清越一直握着江渡的手，直到车子停在公司楼下，他才松开。</p>
+<p>　　临下车时，他双手捧住江渡的脸，低声叮嘱道：</p>
+<p>　　“中午记得好好吃饭，别总想着忙工作。”</p>
+<p>　　江渡轻轻“嗯”了一声，抬眼看了他一下，才推开车门下车。</p>
+<p>　　魏清越目送她的身影走进公司大楼，直到完全消失在视线中，他才靠回座椅上，淡淡地吩咐老罗：</p>
+<p>　　“走吧，去公司。”</p>
+<p>　　另一边，江渡踏进公司时，熟悉的气息扑面而来。</p>
+<p>　　大厅里人来人往，热闹中透着秩序感。</p>
+<p>　　她轻轻叹了口气，像是回到了属于自己的世界。</p>
+<p>　　“小江，终于回来啦！”一道清亮的声音从右侧传来，是王主持。</p>
+<p>　　王主持脸上带着掩不住的笑意，大步朝江渡走过来。</p>
+<p>　　她的手上还端着一杯热气腾腾的咖啡，散发着淡淡的焦香味。</p>
+<p>　　“你可算是好了，之前听说你生病了，大家还担心得不得了呢。”</p>
+<p>　　王主持将咖啡递到江渡手里，语气中满是关切。</p>
+<p>　　“谢谢大家关心，我现在好多了。”</p>
+<p>　　江渡微微一笑，接过咖啡的手指有些发凉，但她能感受到同事间真切的温暖。</p>
+<p>　　不远处，几个同事也纷纷停下手中的工作，朝江渡打招呼：</p>
+<p>　　“江渡，欢迎回来！”</p>
+<p>　　江渡点头回应，目光扫过这些熟悉的面孔。</p>
+<p>　　尽管她性格内向，不擅长主动与人交谈，但同事们一直对她友好而包容，这让她心中不禁泛起一丝暖意。</p>
+<p>　　“好了好了，别围着她了。”</p>
+<p>　　王主持用手轻轻摆了摆，驱散了围观的同事，然后拉着江渡往办公区走去，</p>
+<p>　　“走吧，咱俩聊聊。”</p>
+<p>　　两人走到江渡的座位旁，王主持先是环顾了一圈，然后小声说道：</p>
+<p>　　“其实吧，咱们部门的人一直觉得你有点‘神秘’，平时不爱说话，一有事就闷头干活。真让人羡慕你这份沉得住气的性格。”</p>
+<p>　　江渡听了，只是轻轻笑了笑。</p>
+<p>　　她低下头，将随身带来的文件袋放到桌上，准备开始整理一周未完成的工作。</p>
+<p>　　文件袋打开的瞬间，一张发皱的《书城》杂志从中滑落。江渡连忙弯腰拾起，却被王主持眼尖地瞥见。</p>
+<p>　　“又是这本杂志！”</p>
+<p>　　王主持半开玩笑地说道，</p>
+<p>　　“我发现你啊，什么都不爱买，就喜欢买书和杂志。这本是不是你男朋友推荐的？”</p>
+<p>　　江渡抿了抿唇，将杂志压在文件堆下，耳尖微微泛红。</p>
+<p>　　“好了好了，我不打扰你了。”</p>
+<p>　　王主持看出江渡的害羞，识趣地摆了摆手，</p>
+<p>　　“不过中午可别一个人吃饭啊，咱们部门的人说好聚餐，就算你不多说话，也得来凑个热闹！”</p>
+<p>　　江渡点了点头，目送王主持离开，才终于将注意力完全转回到手中的文件上。</p>
+<p>　　江渡的工作主要是负责公司公众号的稿件审核和内容把关。</p>
+<p>　　她喜欢安静，觉得这样的工作正适合自己。</p>
+<p>　　她打开电脑，屏幕上弹出一连串未读消息和文件提醒。</p>
+<p>　　她迅速整理了一下思路，开始逐一处理。</p>
+<p>　　一篇稿件的标题写得有些生硬，她眉头轻轻皱起，随即在注释中标注了修改建议；另一篇内容逻辑混乱，她则干脆地重新梳理了文章结构。她的动作迅速而干练，带着一种与她温柔外表截然不同的果断。</p>
+<p>　　但即使在工作中，她也时不时会想起清晨的场景。魏清越的手掌的温暖，他在她额头落下的那个吻，都让她心跳微微加快。每当这种情绪涌上来，她会停下手中的工作，深吸一口气，试图让自己重新专注。</p>
+<p>　　“江渡，这篇你看看行不行？”</p>
+<p>　　这时一位同事小心翼翼地走过来，将一篇稿件递到她面前。</p>
+<p>　　那是一个刚入职不久的新人，言语间带着些许忐忑。</p>
+<p>　　江渡接过稿件，仔细翻看后，语气温和地说道：</p>
+<p>　　“这个段落有些长，可以分成两段，这样读起来更清晰些。”</p>
+<p>　　她指了指段落间的空隙，耐心地给新人讲解。</p>
+<p>　　新人听后连连点头，眼里满是感激：</p>
+<p>　　“谢谢你，江渡姐！你真厉害，改得一点毛病都没有。”</p>
+<p>　　“没什么，多积累一些经验就好。”</p>
+<p>　　江渡轻声回答。</p>
+<p>　　看着新人离开的背影，她不禁想起刚入职时的自己，那时的她同样小心翼翼，但更多的是独自摸索。</p>
+<p>　　办公区的窗外，阳光逐渐变得明亮，但冷空气依然隐隐透过玻璃传递进来。</p>
+<p>　　江渡低头继续审核文件，时间在这一刻变得格外安静。</p>
+<p>　　快到中午时，王主持又出现在她桌旁，直接拍了拍她的椅背：</p>
+<p>　　“走了，午餐时间到了，别装忙了。”</p>
+<p>　　江渡有些犹豫，但还是站起身来，和王主持以及其他几位同事一起走向公司楼下的餐厅。</p>
+<p>　　餐厅里充满了各种菜肴的香气，暖黄色的灯光让人感觉分外舒适。</p>
+<p>　　同事们七嘴八舌地聊着各种话题，从公司新来的实习生到市场动态，话题毫无间断。</p>
+<p>　　江渡大部分时间在旁安静地听着，但偶尔也会点头附和几句。</p>
+<p>　　闲暇无聊时，她给魏清越发消息打趣，以解乏味。</p>
+<p>　　当有同事提到下班后的安排时，江渡又不自觉地想起魏清越。</p>
+<p>　　他说过会来接她，一想到他站在公司楼下的模样，她的嘴角便微微上扬。</p>
+<p>　　这一细微的变化被王主持捕捉到。</p>
+<p>　　“江渡，你在笑什么？”</p>
+<p>　　王主持突然问道。</p>
+<p>　　“没什么。”</p>
+<p>　　江渡连忙低头掩饰，专心吃着盘子里的食物。但她脸上的红晕却没有那么容易隐藏。</p>
+<p>　　午餐过后，江渡回到办公桌前，重新投入到下午的工作中。</p>
+<p>　　一切都如往常一样平静，但她的内心却因为某个人的存在，多了一丝柔软的期待。</p>
+<p>　　而这边，魏清越在送走江渡后，车子缓缓驶向公司。</p>
+<p>　　他靠在车后座上，目光落在窗外。</p>
+<p>　　街景飞速倒退，清晨的阳光洒在城市的大楼上，反射出浅淡的金色光芒。</p>
+<p>　　魏清越的目光却有些涣散，似乎并未完全投入眼前的景象。</p>
+<p>　　他脑海中还留存着江渡走进公司时的背影，脑补着她在工位上认真工作的模样。</p>
+<p>　　那双纤细的手落在键盘上敲击时，总是格外专注。</p>
+<p>　　他微微勾起嘴角，心情愉悦地闭了闭眼睛。</p>
+<p>　　即使工作一整天，他也从未觉得这份生活有丝毫乏味，尤其是每天能够看到她。</p>
+<p>　　车子缓缓驶入公司大楼前的停车区，玻璃外是高楼倒映着深秋清冷的天色。</p>
+<p>　　魏清越推开车门，深色的长风衣随着动作微微扬起，他站在大厦门口，片刻后整理了一下袖口，迈步走进公司。</p>
+<p>　　一进大厅，安静的空间立刻被细微的动静填满。</p>
+<p>　　前台接待员看到他的一瞬间先是一愣，随后立刻站起身，声音带着几分恭敬又小心翼翼的颤抖：</p>
+<p>　　“魏总，早上好。”</p>
+<p>　　魏清越只是点了点头，步伐不停。</p>
+<p>　　他目光平静而专注，一路走向电梯，周围的员工迅速注意到他的身影，原本轻声交谈的几人瞬间噤声，低头假装忙碌。</p>
+<p>　　电梯门刚要关上，忽然一个年轻的助理快步冲过来，扶住门边：</p>
+<p>　　“魏总，等等我！”</p>
+<p>　　电梯里，助理小心地站在一侧，不敢靠得太近。他看了看魏清越低头翻阅手机的模样，试探着开口：</p>
+<p>　　“魏总，您最近都没来公司，大家都很想您……”</p>
+<p>　　魏清越抬起眼，目光淡淡地扫了他一眼，没有接话。</p>
+<p>　　那助理察觉到对方不想多说，只好低下头闭嘴。但他的沉默似乎更像是个信号，等魏清越走进自己的办公室时，接连几位部门主管便跟在后面鱼贯而入。</p>
+<p>　　“魏总，您终于回来了！”</p>
+<p>　　一位年长的经理语气热络，脸上带着明显的谄媚笑容，</p>
+<p>　　“您不在这段时间，我们都不敢松懈，每天都严格按照您的要求推进工作。”</p>
+<p>　　“是啊，魏总，”另一人附和，“您上次提到的项目，我们已经整理了最新的方案文件，等会儿随时可以向您汇报！”</p>
+<p>　　“魏总，您这段时间辛苦了吧？听说是因为家里的事，您放心，公司这边一切都运转得很顺利……”</p>
+<p>　　说话的是一位年轻的女主管，她的语气带着讨好的甜腻，目光试图引起对方的注意。</p>
+<p>　　魏清越站在办公桌旁，慢条斯理地脱下风衣，挂到一旁的衣架上。</p>
+<p>　　他没有回应任何一人的话，转身在办公椅上坐下，修长的手指敲了敲桌面：</p>
+<p>　　“文件呢？”</p>
+<p>　　场面一时安静下来。</p>
+<p>　　刚才还滔滔不绝的人们立刻识趣地住了嘴，开始低头翻找准备好的资料。</p>
+<p>　　魏清越微微皱眉，语气不疾不徐却透着一丝不耐：</p>
+<p>　　“既然说准备好了，就不要浪费时间。”</p>
+<p>　　几人急忙将文件递到他面前，他低头翻阅，目光扫过文字，眼神里没有半分波澜。</p>
+<p>　　偶尔有主管小心翼翼地提一句自己的想法，他也只是微微点头表示听到，却并不多言。</p>
+<p>　　“魏总，接下来您看我们……”有人试图再进一步讨好，话还没说完，便被魏清越冷淡地打断：“今天的议程发给我了吗？”</p>
+<p>　　“啊，发了发了，您看……”那人连忙掏出手机，手忙脚乱地翻找。</p>
+<p>　　魏清越靠在椅背上，眼神带着些许冷意，语气始终平静：</p>
+<p>　　“既然我不在都能按计划推进，那也没必要为了表现刻意浪费时间。我的时间很宝贵。”</p>
+<p>　　他的声音并不高，却让整个房间的空气都冷了几分。</p>
+<p>　　众人面面相觑，不敢再开口。</p>
+<p>　　片刻后，魏清越低头看了看表：</p>
+<p>　　“下午会开在几点？”</p>
+<p>　　“魏总，两点钟的项目进度会。”有人小声回答，语气明显收敛了许多。</p>
+<p>　　“嗯。”魏清越简单地应了一声，随后挥了挥手，</p>
+<p>　　“行了，都出去吧。”</p>
+<p>　　几位主管如释重负，迅速告退。</p>
+<p>　　偌大的办公室恢复了安静，魏清越合上文件，靠在椅背上，眼神里多了几分疲惫。</p>
+<p>　　他随手点开手机屏幕，看到江渡发来的“已经到公司”消息，嘴角不自觉地微微上扬，那一抹冷淡也在瞬间化开，换成了少见的柔和。</p>
+<p>　　他开始从容地低头浏览文件，文件上的内容涉及公司近期的发展规划，但他的动作没有丝毫迟疑。	</p>
+<p>　　魏清越一向决策果断，哪怕是在复杂的商业场上，也很少有人能够挑出他的错漏。</p>
+<p>　　然而，在文件的间隙，他的手机屏幕亮了一下，是江渡发来的消息。</p>
+<p>　　内容简单而温暖——</p>
+<p>　　“好好工作，不许偷懒。”</p>
+<p>　　魏清越嘴角轻轻扬起，修长的手指迅速回复了一句：</p>
+<p>　　“不偷懒，中午记得好好吃饭。”</p>
+<p>　　发完后，他放下手机，继续投入工作。</p>
+<p>　　中午时分，魏清越的手机再次震动。</p>
+<p>　　这次是老同学张晓蔷发来的消息，约他在附近的一家法餐厅见面。</p>
+<p>　　消息内容简洁，却带着熟稔的口吻：</p>
+<p>　　“今天有空吗？想聊聊新能源汽车项目。”</p>
+<p>　　他微微皱了皱眉，回忆了一下近期的业务安排，确认这一领域的合作确实有待推进，便回复了一个字：</p>
+<p>　　“行。”</p>
+<p>　　……</p>
+<p>　　正午时分，当他推开餐厅厚重的木门时，张晓蔷已经坐在靠窗的位置，桌上的红酒杯微微晃动，映出窗外的明媚阳光。</p>
+<p>　　“真是稀客，”</p>
+<p>　　张晓蔷抬头看到他，笑着调侃道，</p>
+<p>　　“你都当上公司老板了，见你一面比登天还难。”</p>
+<p>　　魏清越将外套搭在椅背上，语气平静地回应：</p>
+<p>　　“项目细节是什么？可以开始说了。”</p>
+<p>　　他的话语简洁有力，带着几分冷淡的职业气息。</p>
+<p>　　然而，张晓蔷似乎并未在意，只是轻轻一笑：</p>
+<p>　　“别急嘛，咱们好久没见了，总得寒暄几句吧。”</p>
+<p>　　魏清越沉默片刻，点了点头，端起服务生送来的水杯抿了一口，算是默认了她的提议。</p>
+<p>　　“对了，”</p>
+<p>　　张晓蔷话锋一转，眼中带着一丝促狭的笑意，</p>
+<p>　　“你和江渡打算什么时候结婚啊？”</p>
+<p>　　魏清越的动作一顿，抬头看向她，眼神中闪过一丝惊讶和一抹温柔。</p>
+<p>　　他轻笑了一声，低声答道：</p>
+<p>　　“可能过年那几天吧。”</p>
+<p>　　说完，他自己也愣了一下，随即挑眉看向张晓蔷：</p>
+<p>　　“怎么突然问这个？”</p>
+<p>　　张晓蔷笑得意味深长：</p>
+<p>　　“因为我下个月要结婚了，想提前告诉你，也顺便邀请你来参加我的婚礼。”</p>
+<p>　　“结婚？”魏清越挑眉，眼中闪过些许惊讶，</p>
+<p>　　“你什么时候谈的恋爱？现在都要结婚了？我怎么一点风声都没听到？”</p>
+<p>　　张晓蔷摊了摊手，语气轻松：</p>
+<p>　　“谈了快一年吧，也没特意宣传。”</p>
+<p>　　张晓蔷随意地说道，似乎并不想过多解释，但她又趁机埋怨起来，</p>
+<p>　　“不过这件事倒是提醒我，你这几年可真不怎么联系老同学。</p>
+<p>　　你呀，回国这五六年，整天忙得晕头转向，都不知道你是不是把好多联系方式都弄丢了。</p>
+<p>　　上次江渡生病，你让我联系大家去探望，你就知道找我帮忙，那次还是我召集大家来的，你以为谁都像你一样一直呆在这个城市啊。</p>
+<p>　　平时对我们这些老同学也不关心。</p>
+<p>　　像王京京，你还记得吗？她可是江渡最好的闺蜜，在你回国没多久之后就已经结婚了，现在孩子都有了。</p>
+<p>　　还有刘小乐，也已经结婚了，过着平平淡淡的日子。</p>
+<p>　　哦，对了，朱玉龙你还记得吧？江渡的同桌，现在是著名的心理医生，也和另一位医生组建了家庭。”</p>
+<p>　　这时张晓蔷耸了耸肩，才继续说道，</p>
+<p>　　“至于林海洋，我也不太清楚他的情况，他性格本来就大大咧咧的，跟我们联系少，我和他也不算亲近。”</p>
+<p>　　随后，张晓蔷端起酒杯，语气轻快地说道：</p>
+<p>　　“行了，不说这些老同学了。你还没回答我呢，我婚礼你来不来？”</p>
+<p>　　魏清越无奈地轻笑，点头答应：“来。”</p>
+<p>　　“好。”张晓蔷笑着放下酒杯，“不过你别跟以前那次元旦汇演那样放我鸽子啊，这次可是我人生大事。”</p>
+<p>　　“这么多年了，还记得那件破事。”</p>
+<p>　　魏清越摇头失笑，语气却带着认真，</p>
+<p>　　“不会的，这次。”</p>
+<p>　　他顿了顿，语气里带着几分询问：</p>
+<p>　　“要不要把江渡也带上？”</p>
+<p>　　“随你。”</p>
+<p>　　张晓蔷耸肩，随后话锋一转，带着些调侃的意味说道：</p>
+<p>　　“不过江渡看起来挺害羞的，估计婚礼上会比新娘子我还紧张。”</p>
+<p>　　魏清越想到江渡羞涩的模样，嘴角不自觉地浮现笑意。</p>
+<p>　　但他只是默默点了点头，什么也没说。</p>
+<p>　　两人寒暄结束后，逐渐转回到工作话题上。</p>
+<p>　　张晓蔷提到新能源汽车的合作计划，但语气中并未涉及太多具体细节，只是抛出了几个初步的想法。</p>
+<p>　　魏清越敏锐地捕捉到了其中的关键信息，立刻提出了几项相关建议。</p>
+<p>　　“项目可以谈，但我希望你们的团队能先拿出一份具体的市场预测报告。”</p>
+<p>　　他说道，声音冷静且专业。</p>
+<p>　　张晓蔷点头：</p>
+<p>　　“没问题，我们会尽快安排的。”</p>
+<p>　　她顿了顿，似乎想起了什么，又补充道：</p>
+<p>　　“对了，听说林海洋最近也在这个领域做研究，你有没有联系过他？”</p>
+<p>　　“没有。”</p>
+<p>　　魏清越语气平淡，似乎对这个话题并无兴趣。</p>
+<p>　　他起身拿起外套，语气不疾不徐：</p>
+<p>　　“今天就先到这里吧，婚礼见。”</p>
+<p>　　“好，到时候见。”</p>
+<p>　　张晓蔷看着他的背影消失在餐厅门口，忍不住摇了摇头，暗自笑道：</p>
+<p>　　“他还是那么直接，就像他一贯的作风。”</p>
+<p>　　魏清越走出餐厅时，阳光已经变得柔和了些许。</p>
+<p>　　他站在街边稍作停留，深吸了一口带着凉意的空气，随后迈步朝车子走去。</p>
+<p>　　回到公司后，他重新投入到会议与文件的处理中。</p>
+<p>　　此时的阳光透过落地窗洒在地板上，浅浅的光影映出他的身影。</p>
+<p>　　他脱下外套挂在椅背上，略微活动了一下肩膀，随后坐回到办公桌前。</p>
+<p>　　桌面上堆放的文件整齐有序，助理早已将下午的会议议程安排得妥妥当当。</p>
+<p>　　他随手翻开文件，目光快速扫过关键内容，手指在桌面上轻敲几下，仿佛在心中盘算着。</p>
+<p>　　下午的两场会议主要是关于公司近期新项目的进展。</p>
+<p>　　魏清越在会议上表现得一如既往地冷静而果断。</p>
+<p>　　与会者们有条不紊地汇报着各自的工作进展，而他则偶尔点头，提出一些关键问题。</p>
+<p>　　“这个月的市场调研反馈呢？消费者的意见如何具体落实到产品设计上？”</p>
+<p>　　他低沉的声音在会议室内响起。</p>
+<p>　　“魏总，我们的设计团队已经做了初步调整，下周会有更具体的方案……”</p>
+<p>　　负责项目的经理连忙回答，语气中带着几分紧张。</p>
+<p>　　魏清越点了点头，目光扫视一圈后，平静地说道：</p>
+<p>　　“好，下周拿方案来给我看，如果有不足的地方，我会直接指出。”</p>
+<p>　　会议结束后，魏清越回到办公室，助理轻轻敲门进来，将一份新的市场分析报告递给他。他翻开浏览了几页，随即放到一边：</p>
+<p>　　“晚上我再看，你去忙吧。”</p>
+<p>　　助理点了点头，转身离开。</p>
+<p>　　魏清越靠在椅背上，闭上眼睛短暂地休息了一会儿。</p>
+<p>　　忙碌的一天即将结束，但他却没有丝毫的疲惫，反而因为将要见到江渡而感到一种隐隐的期待。</p>
+<p>　　随着下班时间临近，魏清越整理好桌面，将椅背上的外套披上，他忽然决定亲自驱车去接江渡下班，于是拿起车钥匙离开办公室。</p>
+<p>　　走出公司大门时，寒风迎面吹来，他拉了拉大衣的衣领，低头朝车库走去……</p>
+
+			<br>
+			
+		</article>
+	</div>
+	<div class="other">
+		<div class="container">
+			<nav class="post-nav">
+
+    
+         <!-- 先找到与当前文字相同的目录 -->
+            
+            
+                 
+                 <!-- 在找到当前文章所在的 index -->
+                    
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                          <!-- 上一篇文章 --> 
+                            <div class="old">
+                                <span>上一章</span>
+                                <a href="/2024/11/26/%E7%AC%AC26%E7%AB%A0-%E8%A7%81%E7%BE%9E%E9%9F%B5/"> 第26章 见羞韵</a>
+                            </div>
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                         
+
+                        
+
+                        
+
+                    
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+                 
+                
+            
+        
+    
+
+</nav> 
+		</div>
+	</div>
+	<div class="container comment">
+		<div class="valine"></div>
+<script src='https://cdn.jsdelivr.net/npm/valine'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '27qBY80UuaT75mwn7shbXadj-gzGzoHsz',
+        appKey: 'gYuZwaWOM81vS09jYufI8EtA'
+    })
+</script>
+	</div>
+</div>
+		<div class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-left">梦浅如烟</div>
+            <div class="footer-right"> 
+                <div class="footer-links">
+                    
+                </div>
+                <div calss="footer-copyright">&copy; 2024 梦浅如烟
+                          Powered by <a rel="noreferrer" href="www.电脑哥.cn" target="_blank">电脑哥</a> 
+                    &amp; <a rel="noreferrer" href="https://fanqienovel.com/author-page/1436420998963876" target="_blank">梦浅如烟</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+	</body>
+</html>
