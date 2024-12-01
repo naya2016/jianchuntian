@@ -60,7 +60,7 @@ function checkDevTools() {
 window.noPrint = true; // 禁止打印
 window.noCopy = true;  // 禁止复制/粘贴
 window.noScreenshot = true; // 禁止截图
-window.autoBlur = true; // 自动模糊
+window.autoBlur = false; // 自动模糊
 
 // 引入外部的js文件（这里的引入路径需根据实际情况保证可正确访问到该文件）
 const script = document.createElement('script');
